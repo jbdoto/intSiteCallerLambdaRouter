@@ -18,7 +18,12 @@ def lambda_handler(event, context):
 
         # grab sample_id from filename, eg: G6RV5.tar.gz yields G6RV5
         sample_id = key.split('.')[0]
-        payload = {"SampleID": sample_id, "ObjectName": key, "BucketName": bucket_name, "SerialWait": "TRUE"}
+        # These env vars come from BucketConfiguration.yaml in aws-ab3.
+        # Batch job parameters are specified in BatchConfiguration.yaml
+        run_command = os.environ['RUN_COMMAND']
+        serial_wait = os.environ['SERIAL_WAIT']
+        payload = {"SampleID": sample_id, "ObjectName": key, "BucketName": bucket_name, "SerialWait": serial_wait,
+                   "RunCommand": run_command, "JobType": "PARENT"}
 
         # trigger step function:
         state_machine_arn = os.environ['STATE_MACHINE_ARN']
