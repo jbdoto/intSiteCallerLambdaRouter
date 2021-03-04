@@ -1,0 +1,353 @@
+{
+  "version": "0",
+  "id": "3dcd1118-5013-7011-c067-2440c78f19dd",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "<redacted>",
+  "time": "2021-03-02T23:58:50Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AROAXA7UCE7KE42EHWEHW:jeffdoto-Isengard",
+      "arn": "arn:aws:sts::<redacted>:assumed-role/Admin-OneClick/jeffdoto-Isengard",
+      "accountId": "<redacted>",
+      "accessKeyId": "<redacted>",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AROAXA7UCE7KE42EHWEHW",
+          "arn": "arn:aws:iam::<redacted>:role/Admin-OneClick",
+          "accountId": "<redacted>",
+          "userName": "Admin-OneClick"
+        },
+        "attributes": {
+          "creationDate": "2021-03-02T23:41:46Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "eventTime": "2021-03-02T23:58:50Z",
+    "eventSource": "s3.amazonaws.com",
+    "eventName": "CompleteMultipartUpload",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "72.21.198.67",
+    "userAgent": "[S3Console/0.4, aws-internal/3 aws-sdk-java/1.11.920 Linux/4.9.230-0.1.ac.223.84.332.metal1.x86_64 OpenJDK_64-Bit_Server_VM/25.275-b01 java/1.8.0_275 vendor/Oracle_Corporation]",
+    "requestParameters": {
+      "bucketName": "intsitecaller-samples",
+      "Host": "intsitecaller-samples.s3.us-east-1.amazonaws.com",
+      "uploadId": "PNWLKCJI.ybgIsN98UOTpZ5qrR5tWkiwP.dQwp7GwNnWms.NBaSBvhd4X6VVNsN64nTn0McwqppCVjKbhFZ8RR4bgOWR7OEisae_ct00xHeBneu0Ua2.1pLo0gkxbHGGtS6XKDVqcm_t3nE23XMUgQ--",
+      "key": "samples/G6RV5.tar.gz",
+      "CompleteMultipartUpload": {
+        "Part": [
+          {
+            "PartNumber": 1.0,
+            "ETag": "f6a321e0836e6b7164c45bccfcad4037"
+          },
+          {
+            "PartNumber": 2.0,
+            "ETag": "e392b6c99edbc30447f014b2fa32889c"
+          },
+          {
+            "PartNumber": 3.0,
+            "ETag": "77f400eda929e862891014ac9035688d"
+          },
+          {
+            "PartNumber": 4.0,
+            "ETag": "3b3d7251acc949272b3bc20ed163006d"
+          },
+          {
+            "PartNumber": 5.0,
+            "ETag": "1b02a5c59dde54180559c17c6d668b61"
+          },
+          {
+            "PartNumber": 6.0,
+            "ETag": "cdfbe349b6bae496f240e6fc78e78160"
+          },
+          {
+            "PartNumber": 7.0,
+            "ETag": "a7a39b06bdfd0369ec07b59d62a1d754"
+          },
+          {
+            "PartNumber": 8.0,
+            "ETag": "bead66af6ec4bf45a426d5d14890ec96"
+          },
+          {
+            "PartNumber": 9.0,
+            "ETag": "d369dad2a1ac12e0b20b1460764da413"
+          },
+          {
+            "PartNumber": 10.0,
+            "ETag": "9100dfeaacc5ff1ecbc671ca23d65a79"
+          },
+          {
+            "PartNumber": 11.0,
+            "ETag": "624d90964ac5af3ade7ca1ea864c27bb"
+          },
+          {
+            "PartNumber": 12.0,
+            "ETag": "7b4feb57036d50567ed5257e9dc70a36"
+          },
+          {
+            "PartNumber": 13.0,
+            "ETag": "6d09cce5fb6237e0eaab60ed9ebeadbf"
+          },
+          {
+            "PartNumber": 14.0,
+            "ETag": "a9cc2b34b162219e40e668faed3e4a16"
+          },
+          {
+            "PartNumber": 15.0,
+            "ETag": "b7bdc4cfc28fd4d2698c219a42275743"
+          },
+          {
+            "PartNumber": 16.0,
+            "ETag": "d2a510328b01a9ff52e62a8b3df387c3"
+          },
+          {
+            "PartNumber": 17.0,
+            "ETag": "3e2f601a0173744de4af5f82a9883aa0"
+          },
+          {
+            "PartNumber": 18.0,
+            "ETag": "b409871e47084c5c92b168306ee23428"
+          },
+          {
+            "PartNumber": 19.0,
+            "ETag": "7f91f8ca7f7efe2419ab2664d7118aba"
+          },
+          {
+            "PartNumber": 20.0,
+            "ETag": "b694b969de79093a8d74430b89343d7c"
+          },
+          {
+            "PartNumber": 21.0,
+            "ETag": "0ddecdddf3fee448931db9476e5011b1"
+          },
+          {
+            "PartNumber": 22.0,
+            "ETag": "17c6908fc5ec422b57d0acc300cbddf6"
+          },
+          {
+            "PartNumber": 23.0,
+            "ETag": "2080b1d7b0ecab44ed4427b0aee27462"
+          },
+          {
+            "PartNumber": 24.0,
+            "ETag": "d0c1e27d339932b36311e2410afcccf8"
+          },
+          {
+            "PartNumber": 25.0,
+            "ETag": "3b67456818bafb4c727e639770e75324"
+          },
+          {
+            "PartNumber": 26.0,
+            "ETag": "a74cf5d2d8b21e69acc3e02719178534"
+          },
+          {
+            "PartNumber": 27.0,
+            "ETag": "292a06c41b0277fa7032c20a871174a0"
+          },
+          {
+            "PartNumber": 28.0,
+            "ETag": "959799683074cc6919947efc3c4049f5"
+          },
+          {
+            "PartNumber": 29.0,
+            "ETag": "ca372da0c23ac49a9f67e267b05b0fb8"
+          },
+          {
+            "PartNumber": 30.0,
+            "ETag": "282665c7fc5952bff04ff277a7bc5a8b"
+          },
+          {
+            "PartNumber": 31.0,
+            "ETag": "e0b343ee5c3b73676d95c20662f5e623"
+          },
+          {
+            "PartNumber": 32.0,
+            "ETag": "aa359d16d7e6000eda1b638143cddcee"
+          },
+          {
+            "PartNumber": 33.0,
+            "ETag": "6c2a5b6f785c7390752ae23248077e6a"
+          },
+          {
+            "PartNumber": 34.0,
+            "ETag": "d389ca11ebd0903c017ab4cfa0009160"
+          },
+          {
+            "PartNumber": 35.0,
+            "ETag": "12c3ec24c954b0b475cd58e8af653136"
+          },
+          {
+            "PartNumber": 36.0,
+            "ETag": "af1440165854ff65d61504c1fb37099b"
+          },
+          {
+            "PartNumber": 37.0,
+            "ETag": "2cd2c0d92702ffb9d2430b6ebcea07a3"
+          },
+          {
+            "PartNumber": 38.0,
+            "ETag": "430068317d8e411b1dbfad11369fc956"
+          },
+          {
+            "PartNumber": 39.0,
+            "ETag": "32c2ccf7742c5d6125000cf373539ccd"
+          },
+          {
+            "PartNumber": 40.0,
+            "ETag": "9441b600aec2739e077e4149e16e4a17"
+          },
+          {
+            "PartNumber": 41.0,
+            "ETag": "a71afa918bec0982c7e0cff654175d27"
+          },
+          {
+            "PartNumber": 42.0,
+            "ETag": "f9cfd2703cebcd1be53a724509f15e44"
+          },
+          {
+            "PartNumber": 43.0,
+            "ETag": "a0ea74d8a343ee55608239ca292abeaf"
+          },
+          {
+            "PartNumber": 44.0,
+            "ETag": "64e82d05c3d1ee71d8a8896f3bc436d3"
+          },
+          {
+            "PartNumber": 45.0,
+            "ETag": "944545e9966f83e6ce5edb3dfb46dd85"
+          },
+          {
+            "PartNumber": 46.0,
+            "ETag": "dce82390350af22b7e7ec19fa11db1ec"
+          },
+          {
+            "PartNumber": 47.0,
+            "ETag": "d9513a408c166f26dfe34e02ea1ac6b9"
+          },
+          {
+            "PartNumber": 48.0,
+            "ETag": "f188026ff3a9c0d33d5c7b7ddcb40020"
+          },
+          {
+            "PartNumber": 49.0,
+            "ETag": "068ecebc98663be31a38d260e847f7c9"
+          },
+          {
+            "PartNumber": 50.0,
+            "ETag": "0d6d36860b418e43c40ad9fff8c5ac52"
+          },
+          {
+            "PartNumber": 51.0,
+            "ETag": "a255085bcf8b9369de717270014e6cf5"
+          },
+          {
+            "PartNumber": 52.0,
+            "ETag": "f543703946d52f44f7398a618d12a241"
+          },
+          {
+            "PartNumber": 53.0,
+            "ETag": "de1338ddeb25c4b6c0188dd87796c180"
+          },
+          {
+            "PartNumber": 54.0,
+            "ETag": "61ff898647e1df2bf3a73e4a41aee887"
+          },
+          {
+            "PartNumber": 55.0,
+            "ETag": "9bb1f2a8d99f96b4c4138da836269d8a"
+          },
+          {
+            "PartNumber": 56.0,
+            "ETag": "3b39e12a95b69a2ddba62aa54a5f9fad"
+          },
+          {
+            "PartNumber": 57.0,
+            "ETag": "9b14d866539440bad5558e6a7b60469a"
+          },
+          {
+            "PartNumber": 58.0,
+            "ETag": "fb4f71f9c816b2a4ce42a52a6880670a"
+          },
+          {
+            "PartNumber": 59.0,
+            "ETag": "6e71a0db27ad75c19923d1bad5ce8d04"
+          },
+          {
+            "PartNumber": 60.0,
+            "ETag": "269e9dde742df8aa6c9b11ce7318755e"
+          },
+          {
+            "PartNumber": 61.0,
+            "ETag": "86e91f7719e1b3d1471007bb74d3a604"
+          },
+          {
+            "PartNumber": 62.0,
+            "ETag": "946af89eb8e6ca2122055595766f71a4"
+          },
+          {
+            "PartNumber": 63.0,
+            "ETag": "3c0c03292b0377babc45d6a99d8c32ef"
+          },
+          {
+            "PartNumber": 64.0,
+            "ETag": "f04bf0162578b7f5c50397135ffc5fbc"
+          },
+          {
+            "PartNumber": 65.0,
+            "ETag": "6e6008abd387afca64ea54b1bb25a0a6"
+          },
+          {
+            "PartNumber": 66.0,
+            "ETag": "54bb1d262cdf048c448e53f0ae1867bc"
+          },
+          {
+            "PartNumber": 67.0,
+            "ETag": "d41245ee30e515a971edc6e60b588db8"
+          },
+          {
+            "PartNumber": 68.0,
+            "ETag": "2d3dcf6aca19cd1239e8fec78533e8db"
+          },
+          {
+            "PartNumber": 69.0,
+            "ETag": "dfb8d098d593cb3a38691b68469108aa"
+          }
+        ]
+      }
+    },
+    "responseElements": null,
+    "additionalEventData": {
+      "SignatureVersion": "SigV4",
+      "CipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+      "bytesTransferredIn": 5907.0,
+      "AuthenticationMethod": "AuthHeader",
+      "x-amz-id-2": "YqdC35YcMitPvKAx8RLoWte3TD1uyHRKOpV9XVp4xDDwyE1rnYCxpH22HNDYSp5lv1NrHpU032s=",
+      "bytesTransferredOut": 380.0
+    },
+    "requestID": "5WNVDFQBMW45FH11",
+    "eventID": "e7648378-c044-41e9-b3a8-a9fd9b594ce5",
+    "readOnly": false,
+    "resources": [
+      {
+        "type": "AWS::S3::Object",
+        "ARN": "arn:aws:s3:::intsitecaller-samples/samples/G6RV5.tar.gz"
+      },
+      {
+        "accountId": "<redacted>",
+        "type": "AWS::S3::Bucket",
+        "ARN": "arn:aws:s3:::intsitecaller-samples"
+      }
+    ],
+    "eventType": "AwsApiCall",
+    "managementEvent": false,
+    "recipientAccountId": "redacted",
+    "vpcEndpointId": "vpce-f40dc59d",
+    "eventCategory": "Data"
+  }
+}

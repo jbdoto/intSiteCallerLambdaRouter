@@ -1,7 +1,7 @@
 import json
-import urllib.parse
-import boto3
 import os
+
+import boto3
 
 print('Loading function')
 step_client = boto3.client('stepfunctions')
@@ -12,18 +12,20 @@ def lambda_handler(event, context):
 
     try:
         # Get the new bucket object from the event and parse its filename:
-        bucket_name = event['Records'][0]['s3']['bucket']['name']
-        # key is the name of our .tar.gz file:
-        key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'], encoding='utf-8')
+        bucket_name = event['detail']['requestParameters']['bucketName']
+        # key is the name of our .tar.gz file, eg samples/G6RV5.tar.gz:
+        key = event['detail']['requestParameters']['key']
 
-        # grab sample_id from filename, eg: G6RV5.tar.gz yields G6RV5
-        sample_id = key.split('.')[0]
+        # grab sample_id from filename, eg: samples/G6RV5.tar.gz yields G6RV5:
+        parts = key.split('.')[0]
+        sample_id = parts.split('/')[1]
+        filename = key.split('/')[1]
         # These env vars come from BucketConfiguration.yaml in aws-ab3.
         # Batch job parameters are specified in BatchConfiguration.yaml
         run_command = os.environ['RUN_COMMAND']
         serial_wait = os.environ['SERIAL_WAIT']
-        payload = {"SampleID": sample_id, "ObjectName": key, "BucketName": bucket_name, "SerialWait": serial_wait,
-                   "RunCommand": run_command, "JobType": "PARENT"}
+        payload = {"SampleID": sample_id, "ObjectName": key, "BucketName": bucket_name, "Filename": filename,
+                   "SerialWait": serial_wait, "RunCommand": run_command, "JobType": "PARENT"}
 
         # trigger step function:
         state_machine_arn = os.environ['STATE_MACHINE_ARN']
@@ -33,5 +35,5 @@ def lambda_handler(event, context):
         print(response)
     except Exception as e:
         print(e)
-        print('Error starting state machine. %s' % (e))
+        print('Error starting state machine. %s' % e)
         raise e
